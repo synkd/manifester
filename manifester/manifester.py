@@ -34,6 +34,7 @@ class Manifester:
     ):
         if minimal_init:
             self.offline_token = settings.get("offline_token")
+            print(f'Offline token = {self.offline_token}')
             self.token_request_url = settings.get("url").get("token_request")
             self.allocations_url = settings.get("url").get("allocations")
             self._access_token = None
